@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static%}
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
+
+
+  <!-- font awsome link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body{
+      background-image: url("{% static 'images/bg-01.jpg' %}");
+    }
+    .cen{
+      width: 100%;
+      height:200px;
+      display: inline-block;
+    }
+    .con{
+      margin-top: 30px;
+      text-align: center;
+      
+    }
+
+  .container-1
+{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height:100px;
+    background-color: #000;
+    font-family: 'Recursive', sans-serif;
+    
+}
+.item{
+    text-align: center;
+}
+h1{
+    display: inline-block;
+    margin:0;
+    padding: 0;
+    color:#111;
+    font-size: 5em;
+}
+.item .btn{
+    padding: 4%;
+    margin-top:250px;
+}
+h1 span{
+    display: table-cell;
+    margin:0;
+    padding:0;
+    animation: animate 1.75s linear infinite;
+}
+h1 span:nth-child(1){
+    animation-delay: 0s;
+}
+h1 span:nth-child(2){
+    animation-delay: 0.25s;
+}
+h1 span:nth-child(3){
+    animation-delay: 0.5s;
+}
+h1 span:nth-child(4){
+    animation-delay: 0.75s;
+}
+h1 span:nth-child(5){
+    animation-delay: 1s;
+}
+h1 span:nth-child(6){
+    animation-delay: 1.25s;
+}
+h1 span:nth-child(7){
+    animation-delay: 1.5s;
+}
+@keyframes animate{
+    0% ,100%{
+        color:#fff;
+        filter:blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff,
+                    0 0 200px #00b3ff;            
+        
+
+    }
+    5% ,95%{
+        color:#111;
+        filter:blur(0px);
+        text-shadow:0 0 10px none;
+    }
+}
+.l-btn{
+  margin: 0 auto;
+  font-size: 1.5em;
+  display: block;
+  z-index: -1;
+  border-radius: 10px;
+  background: #a64bf4;
+  background: -webkit-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: -o-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: -moz-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+  </style>
+  
+</head>
+
+<body>
+  <div class="container-1">
+    <form method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>
+            <span>G</span><span>P</span><span>C </span><span>T</span><span>E</span><span>C</span><span>H</span>
+          </h1>
+          <h2>Lets Begain Your Journey Here!</h2>
+        </div>
+      </div>
+      <div class="cen">
+        <div class="con">
+          <label for="username">Username</label>
+          <input type="text" name='username' id='username'><br>
+       
+      
+          <label for="password">Password </label>
+          <input type="text" name='password' id='password'><br>
+        
+          <p style="color: red;">{{error}}</p>
+          <button class="l-btn" type="submit">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+
+</body>
+
+</html>

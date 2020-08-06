@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    {% block cssstyle %}{% endblock %}
+      
+         
+
+    <!-- font awsome link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img src="{% static 'images/footer-logo_qRESAZj.png' %}" class="gpc-logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item dropdown m-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              What Can You Do
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Jobs For You</a>
+            </div>
+          </li>
+          <li class="nav-item m-4">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item m-4">
+            <a class="nav-link" href="#">GPCTECH</a>
+          </li>
+          <li class="nav-item dropdown m-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Packages
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">CV Package</a>
+              <a class="dropdown-item" href="#">Job Package</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 mr-xl-4">
+        </form>
+        <form action="/register">
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">
+          Register
+        </button>
+      </form>
+      </form>
+        
+        </form>
+          <form action="/login">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Login
+          </button>
+        </form>
+        </form>
+      </div>
+    </nav>
+
+
+    {% block body %}  {% endblock %}
+
+    <div class="card">
+     
+        <div class="footer">
+          <ul class="social-network social-circle">
+            <li>
+              <a
+                class="icoLinkedin"
+                href="#"
+                title="Linkedin"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="icoTwitter"
+                href="#"
+                title="Twitter"
+                ><i class="fa fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="icoMedium"
+                href="#"
+                title="Medium"
+                ><i class="fa fa-medium"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="icoQuora"
+                href="#"
+                title="Quora"
+                ><i class="fa fa-quora"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="icoFacebook"
+                href="#"
+                title="Facebook"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="icoInstagram"
+                href="#"
+                title="Instagram"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+       
+      </div>
+      <div class="card-body d-flex">
+        <ul>
+          <h5>Learn About Us</h5>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <ul>
+          <h5>For candidate</h5>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul>
+          <h5>For Employer</h5>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+      
+  </body>
+</html>

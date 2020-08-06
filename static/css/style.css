@@ -1,0 +1,156 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.gpc-logo{
+  margin-left: 100px;
+  width: 120px;
+  height: 60px;
+  position: relative;
+}
+.dropdown:hover > .dropdown-menu{
+  display: block;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0;
+  border-left: 0 !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0,0,0) !important;
+}
+
+.home-img{
+  width:100%;
+  height:800px;
+ 
+  background-repeat: no-repeat;
+}
+.heading{
+  position: relative;
+  padding-top:30%;
+ 
+  box-sizing: border-box;
+
+}
+.heading h2{
+  font-size:50px;
+  line-height:1.2;
+  margin-bottom: 20px;
+  font-weight: 700;   
+}
+.heading p{
+  font-size:20px;
+  letter-spacing:0.1em;
+}
+.jobsearch-input{
+  padding-top: 14%;
+  margin-top: 20px;
+  
+}
+
+input[type=text]{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+   border-radius: 50px;
+   border: 1px solid #fff;
+   color: #fff;
+   width: 80%;
+   height: 68px;
+   padding-left:10px;
+   margin-top: 20px;
+  }
+  
+input[type=text]:focus {
+   outline: none;
+   border: 1px solid #a0d18c;
+   color: #2d9fd9;
+}
+input[type=button]{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+   border-radius: 50px;
+   border: 1px solid #fff;
+   color: #000;
+   width: 80%;
+   height: 68px;
+   padding-left:10px;
+   margin-top: 20px;
+  }
+  
+input[type=button]:focus {
+   outline: none;
+   border: 1px solid #a0d18c;
+   color: #2d9fd9;
+}
+.search-button i{
+  position: relative;
+  margin-left:-55%;
+}
+.team-member{
+  border-radius:50% !important;
+  background-color: #a0d18c;
+}
+.hr-tag{
+  width: 100%;
+  height: 1px;
+  border: 1px solid black !important;
+  background-color: #000;
+  position: relative;
+  top:-40px;
+  z-index: -1;
+  opacity: 0.5;
+}
+.client-reviews{
+  background-color:rgb(168, 194, 202) !important;
+
+}
+.img-client{
+  padding: 12%;
+  border-radius: 50%;
+  margin-left:20%; 
+  margin-top:-10%;
+}
+.para-fix{
+  position: relative;
+  margin-top:-10%;
+  width: 60%;
+  margin-left:20%;
+}
+.margin-icon{
+  margin-left: 40% !important;
+}
+.newsletter{
+  padding-top: 100px;
+}
+.newsletter .container{
+  padding-top: 120px 100px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.main-footer{
+  background-color: rgba(88, 80, 80, 0.726);
+}
+.main-footer .card{
+  background-color: rgba(88, 80, 80, 0.726);
+  color:#fff;
+  
+}
+.main-footer .card ul li{
+  background-color: rgba(88, 80, 80, 0.726,0.9);
+  color:rgb(209, 19, 19);
+}
+.main-footer .card ul li a{
+  text-decoration: none;
+  color:rgb(170, 17, 17);
+}
+.icons-social .fa{
+  background-color:#fff;
+  padding: 4%;
+  cursor: pointer;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+
+
+
+    <!-- font awsome link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+
+
+.l-btn{
+  display: block;
+  z-index: -1;
+  border-radius: 10px;
+  background: #a64bf4;
+  background: -webkit-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: -o-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: -moz-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+.col-md-12{
+    display: flex;
+    height: 70px;
+    background-color: #a64bf4;
+    align-items: center;
+}
+.col-md-12 form{
+margin-left: auto;
+}
+ul li{
+    list-style: none;
+    color:white;
+    
+}
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p><ul>
+                    <li>{{user.first_name}}</li>
+                    
+                    <li>{{user.username}}</li>
+                </ul></p>
+                <form method="Post" action="/logout/">
+                  {% csrf_token %} 
+                <input  class="l-btn" type="submit" value="logout">
+                </form>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <h2>Jobs</h2>
+                  
+                 {{Postjob.Postjob_dis}}
+                </div>
+            </div>
+           
+        </div>
+    
+
+  <!--Carousel Wrapper-->
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+    <!--Controls-->
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <!--First slide-->
+      
+      <div class="carousel-item active">
+       
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="{% static 'candi/can5.jpg'%}"
+              alt="Card">
+            <div class="card-body">
+              <h4 class="card-title">Manager</h4>
+              <p class="card-text">{{p.Postjob_dis}}</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <div class="carousel-item">
+       
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="./../{{p.Postjob_img}}"
+              alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Web Dev</h4>
+              <p class="card-text">{{p.Postjob_dis}}</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+   
+     
+
+
+
+
+      <!--/.Second slide-->
+
+
+
+
+      <!--/.Slides-->
+
+    </div>
+  </div>
+  <!--/.Carousel Wrapper-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+    </div>
+</body>
+
+</html>
